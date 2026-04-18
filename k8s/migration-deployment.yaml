@@ -24,6 +24,8 @@ spec:
       labels:
         io.kompose.service: migration
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
         - args:
             - python
