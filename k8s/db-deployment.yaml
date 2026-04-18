@@ -24,6 +24,8 @@ spec:
       labels:
         io.kompose.service: db
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
         - env:
             - name: POSTGRES_DB
